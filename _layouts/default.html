@@ -39,6 +39,14 @@
         
       </header>
 
+      <nav>
+        <ul>
+          {% for item in page.subnav %}
+            <a href="{{ item.url }}">{{ item.title }}</a>
+          {% endfor %}
+        </ul>
+      </nav>
+
       <section>
         {{ content }}
       </section>
