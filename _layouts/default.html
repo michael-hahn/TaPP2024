@@ -36,11 +36,12 @@
           </ul>
         {% endif %}
 
-        <p>
+        
         {% for item in page.subnav %}
+          <p>test {{ item.url }} {{ item.title }}</p>
           <a href="{{ item.url }}">{{ item.title }}</a>
         {% endfor %}
-        </p>
+        
         
       </header>
 
