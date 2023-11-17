@@ -17,3 +17,6 @@ redcarpet:
         'tables',
         'hardwrap'
     ]
+
+whitelist:
+    - MySubnavGenerator
