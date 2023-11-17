@@ -9,7 +9,8 @@ class MySubnavGenerator < Jekyll::Generator
         doc = Nokogiri::HTML(parser.convert(page['content']))
         page.data["subnav"] = []
         doc.css('h2').each do |heading|
-          page.data["subnav"] << { "title" => heading.text, "url" => [page.url, heading['id']].join("#") }
+          #page.data["subnav"] << { "title" => heading.text, "url" => [page.url, heading['id']].join("#") }
+          page.data["subnav"] << { "title" => heading.text, "url" => ["#", heading['id']].join("") }
         end
       end
     end
