@@ -3,7 +3,7 @@ require "nokogiri"
 class MySubnavGenerator < Jekyll::Generator
   def generate(site)
     parser = Jekyll::Converters::Markdown.new(site.config)
-
+    p "test"
     site.pages.each do |page|
       if page.ext == ".md"
         doc = Nokogiri::HTML(parser.convert(page['content']))

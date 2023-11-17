@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 
 <h1 class="h1.header">TaPP 2024</h1>

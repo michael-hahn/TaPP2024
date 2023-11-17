@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
+    {% seo %}
+    
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -11,6 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+
   </head>
   <body>
     <div class="wrapper">
@@ -26,9 +29,9 @@
           <li><a class="buttons github" href="{{ site.github.repository_url }}">View On GitHub</a></li>
         </ul>
 
-        <!-- {% if site.github.is_project_page %}
+        {% if site.github.is_project_page %}
           <p class="header">This project is maintained by <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %} -->
+        {% endif %}
 
         {% if site.github.is_user_page %}
           <ul>
@@ -36,15 +39,14 @@
           </ul>
         {% endif %}
 
-        <nav><ul>
-        {% for item in data.subnav %}
-          <p>test {{ item.url }} {{ item.title }}</p>
-          <a href="{{ item.url }}">{{ item.title }}</a>
-        {% endfor %}
-        </ul>
+        <b style="font-weight: bold;">Navigation</b>
+        <nav>
+          <ul>
+          {% for item in page.subnav %}
+            <a href="{{ item.url }}">{{ item.title }}</a><br />
+          {% endfor %}
+          </ul>
         </nav>
-        
-        
       </header>
 
       <section>
@@ -53,9 +55,7 @@
 
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-        <p>Hello</p>
       </footer>
-
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
