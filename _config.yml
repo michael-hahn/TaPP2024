@@ -4,3 +4,19 @@ title: TaPP 2024
 description: 16th International Workshop on Theory and Practice of Provenance
 
 email: vanbasm@wfu.edu
+
+repository_url: 
+owner_url: 
+owner_name: 
+
+baseurl: ""
+
+plugins:
+    - jekyll-seo-tag
+
+whitelist:
+    - jekyll-seo-tag
+
+markdown: kramdown
+
+safe: False
